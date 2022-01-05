@@ -1,2 +1,3 @@
-# A simple website to generate random colors.
 🎨
+# A simple website to generate random colors.
+
