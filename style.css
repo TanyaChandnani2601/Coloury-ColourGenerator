@@ -1,201 +1,192 @@
 :root {
-    --clr-black: #222;
-    --ff-primary:  'Poppins', sans-serif;;
-    --transition: all 0.5s linear;
-    --spacing: 0.1rem;
-    --radius: 1rem;
-    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --dark-shadow: 0 5px 15px rgba(51, 51, 51, 0.2);
-    --max-width: 1170px;
-    --fixed-width: 620px;
+  --clr-black: #222;
+  --ff-primary: "Poppins", sans-serif;
+  --transition: all 0.5s linear;
+  --spacing: 0.1rem;
+  --radius: 1rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(51, 51, 51, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
 }
 
 *,
 ::after,
 ::before {
   margin: 0;
-  padding : 0;
-  box-sizing : border-box;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-body
-{
-   
-   line-height: 1.5;
-   background: #a5b0b8;
-   color: #b73aff;
-   font-size: 0.875rem;
-   
+body {
+  line-height: 1.5;
+  background: #a5b0b8;
+  color: #b73aff;
+  font-size: 0.875rem;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
   }
-  a {
-    text-decoration: none;
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
   }
   h1,
   h2,
   h3,
   h4 {
-    letter-spacing: var(--spacing);
-    text-transform: capitalize;
-    line-height: 1.25;
-    margin-bottom: 0.75rem;
-    font-family: var(--ff-primary);
+    line-height: 1;
   }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  h4 {
-    font-size: 0.875rem;
-  }
+}
+/*  global classes */
 
-  @media screen and (min-width: 800px) {
-    h1 {
-      font-size: 4rem;
-    }
-    h2 {
-      font-size: 2.5rem;
-    }
-    h3 {
-      font-size: 1.75rem;
-    }
-    h4 {
-      font-size: 1rem;
-    }
-    body {
-      font-size: 1rem;
-    }
-    h1,
-    h2,
-    h3,
-    h4 {
-      line-height: 1;
-    }
-  }
-  /*  global classes */
-  
-  /* section */
-  .section {
-    padding: 5rem 0;
-  }
-  
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
   .section-center {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: 1170px;
+    width: 95vw;
   }
+}
+main {
+  min-height: 88vh;
+  display: grid;
+  place-items: center;
+}
 
-  @media screen and (min-width: 992px) {
-    .section-center {
-      width: 95vw;
-    }
-  }
-  main {
-    min-height: 88vh;
-    display: grid;
-    place-items: center;
-  }
-
-  nav {
-    /* background: #fefefe; */
-    height: 4rem;
-    display: grid;
-    align-items: center;
-    /* box-shadow: var(--dark-shadow); */
-  }
-  .nav-name {
-    width: 90vw;
-    /* max-width: var(--fixed-width); */
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .nav-name h4 {
-    margin-bottom: 0;
-    color: #fff  ;
-  }
-  .nav-main {
-    display: flex;
-    justify-items: right;
-    padding-left:20rem;
- }
-.fas {
-
+nav {
+  /* background: #fefefe; */
+  height: 4rem;
+  display: grid;
+  align-items: center;
+  /* box-shadow: var(--dark-shadow); */
+}
+.nav-name {
+  width: 90vw;
+  /* max-width: var(--fixed-width); */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-name h4 {
+  margin-bottom: 0;
   color: #fff;
 }
-  nav a {
-    text-transform: capitalize;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #fff;
-    letter-spacing: var(--spacing);
-    margin-right: 1rem;
-  }
-  nav a:hover {
-    color: #41145c;
-  }
-  /*
+.nav-main {
+  display: flex;
+  justify-items: right;
+  padding-left: 20rem;
+}
+.fas {
+  color: #fff;
+}
+nav a {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: var(--spacing);
+  margin-right: 1rem;
+}
+nav a:hover {
+  color: #41145c;
+}
+/*
  
   Container
  
   */
-  main {
-    min-height: 20rems;
-    display: grid;
-    place-items: center;
-    justify-content: center;
-  }
- 
-  .container {
-    /* background-color:#222; */
-    /* border-radius: var(--radius); */
-    text-align: center;
-    justify-content: center;
-   text-align: center;
-    font-size: 2rem;
-    /* padding: 5rem; */
-    margin-top: 5rem;
-    /* margin-bottom: 1rem; */
-    color:#ffffff;
-    font-weight: 700;
-   
+main {
+  min-height: 20rems;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
 
-  }
+.container {
+  /* background-color:#222; */
+  /* border-radius: var(--radius); */
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  /* padding: 5rem; */
+  margin-top: 5rem;
+  /* margin-bottom: 1rem; */
+  color: #ffffff;
+  font-weight: 700;
+}
 
-  .btn-hero {
-    text-align: center;
-    align-items: center;
-    font-family: var(--ff-primary);
-    text-transform: uppercase;
-    background: transparent;
-    color: var(--clr-black);
-    letter-spacing: var(--spacing);
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: var(--transition);
-    border: 2px solid var(--clr-black);
-    cursor: pointer;
-    margin-bottom: 5rem;
-    /* margin-top: 0.5rem; */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    border-radius: var(--radius);
-    
-    padding: 0.75rem 1.25rem;
-  }
-  .btn-hero:hover {
-    color: #fff;
-    background: var(--clr-black);
-  }
+.btn-hero {
+  text-align: center;
+  align-items: center;
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-black);
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 2px solid var(--clr-black);
+  cursor: pointer;
+  margin-bottom: 5rem;
+  /* margin-top: 0.5rem; */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
 
+  padding: 0.75rem 1.25rem;
+}
+.btn-hero:hover {
+  color: #fff;
+  background: var(--clr-black);
+}
